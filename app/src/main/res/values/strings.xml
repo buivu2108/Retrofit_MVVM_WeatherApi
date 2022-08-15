@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Weather app</string>
+    <string name="city_state">City, State</string>
+    <string name="hanoi">HaNoi</string>
+    <string name="clear_sky">Clear Sky</string>
+    <string name="_29_c">29.55°C</string>
+    <string name="min_temp_24_c">Min Temp: 24.54 °C</string>
+    <string name="max_temp_28_c">Max Temp: 28.32 °C</string>
+    <string name="_5_day">5 day</string>
+    <string name="next_to">Next to</string>
+    <string name="_1004_1_mb">1004.1 mb</string>
+    <string name="_76">76%</string>
+    <string name="sunset">Sunset</string>
+    <string name="_06_00">06:00</string>
+    <string name="_18_00">18:00</string>
+    <string name="_16_km_h">1.03 m/s</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="next_5_days">Next 5 days</string>
+    <string name="feels_like">Feels like 24.54 °C</string>
+    <string name="_29sep_tuesday">29Sep, Tuesday</string>
+    <string name="_17_c_22_c">17°C / 22°C</string>
+    <string name="sun">Sun</string>
 </resources>
