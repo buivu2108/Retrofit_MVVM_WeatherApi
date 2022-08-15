@@ -7,18 +7,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weatherapp.R
-import com.example.weatherapp.screens.model.Weather7Day
 import java.util.ArrayList
 
 class FutureWeatherAdapter() : RecyclerView.Adapter<FutureWeatherAdapter.ViewHolder>() {
     private val mListWeather7Day: MutableList<Weather7Day> = ArrayList<Weather7Day>()
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.imgWeather)
-        val tvDate: TextView = itemView.findViewById(R.id.tvDate)
-        val tvStatus: TextView = itemView.findViewById(R.id.tvStatusFuture)
-        val tvTempMax: TextView = itemView.findViewById(R.id.tvTempMax)
-        val tvTempMin: TextView = itemView.findViewById(R.id.tvTempMin)
+        private val imageView: ImageView = itemView.findViewById(R.id.imgWeather)
+        private val tvDate: TextView = itemView.findViewById(R.id.tvDate)
+        private val tvStatus: TextView = itemView.findViewById(R.id.tvStatusFuture)
+        private val tvTempMax: TextView = itemView.findViewById(R.id.tvTempMax)
+        private val tvTempMin: TextView = itemView.findViewById(R.id.tvTempMin)
 
 
         fun fillData(weather7Day: Weather7Day){

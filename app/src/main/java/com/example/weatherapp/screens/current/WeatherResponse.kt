@@ -1,4 +1,4 @@
-package com.example.weatherapp.screens.model
+package com.example.weatherapp.screens.current
 
 data class WeatherResponse(
     val weather: ArrayList<Weather>,

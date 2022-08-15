@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.weatherapp.api.API7Day
 import com.example.weatherapp.base.SingleLiveEvent
 import com.example.weatherapp.screens.Constants
-import com.example.weatherapp.screens.model.WeatherResponse7Day
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

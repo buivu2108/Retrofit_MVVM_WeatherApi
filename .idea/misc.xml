@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/vu.bui1/AndroidStudioProjects/Retrofit_MVVM_WeatherApi/app/src/main/res/layout/activity_current_weather.xml" value="0.3546875" />
+        <entry key="..\:/Users/vu.bui1/AndroidStudioProjects/Retrofit_MVVM_WeatherApi/app/src/main/res/layout/activity_future_weather.xml" value="0.3546875" />
         <entry key="..\:/Users/vu/AndroidStudioProjects/Weatherapp/app/src/main/res/drawable/ic_back.xml" value="0.2546875" />
         <entry key="..\:/Users/vu/AndroidStudioProjects/Weatherapp/app/src/main/res/layout/activity_current_weather.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/vu/AndroidStudioProjects/Weatherapp/app/src/main/res/layout/activity_future_weather.xml" value="0.23854166666666668" />

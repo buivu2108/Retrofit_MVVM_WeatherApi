@@ -1,7 +1,7 @@
 package com.example.weatherapp.api
 
-import com.example.weatherapp.screens.model.WeatherResponse
-import com.example.weatherapp.screens.model.WeatherResponse7Day
+import com.example.weatherapp.screens.current.WeatherResponse
+import com.example.weatherapp.screens.future.WeatherResponse7Day
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

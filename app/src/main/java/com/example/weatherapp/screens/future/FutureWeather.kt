@@ -8,9 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.weatherapp.databinding.ActivityFutureWeatherBinding
 import com.example.weatherapp.screens.Constants
-import com.example.weatherapp.screens.model.Weather
-import com.example.weatherapp.screens.model.Weather7Day
-
 
 
 class FutureWeather : AppCompatActivity() {

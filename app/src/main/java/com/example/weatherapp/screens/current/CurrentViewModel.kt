@@ -3,7 +3,6 @@ package com.example.weatherapp.screens.current
 import androidx.lifecycle.ViewModel
 import com.example.weatherapp.api.Api
 import com.example.weatherapp.screens.Constants
-import com.example.weatherapp.screens.model.WeatherResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
