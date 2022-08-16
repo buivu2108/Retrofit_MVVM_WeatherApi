@@ -22,9 +22,12 @@ class CurrentViewModel : ViewModel() {
             override fun onResponse(
                 call: Call<WeatherResponse>, response: Response<WeatherResponse>
             ) {
-                data.value = response.body()
+                if (response.body()!=null){
+                    data.value = response.body()
+                }else{
+                    actionShowCallApiFail.call()
+                }
             }
-
             override fun onFailure(call: Call<WeatherResponse>, t: Throwable) {
                 actionShowCallApiFail.call()
             }
