@@ -38,9 +38,7 @@ class FutureWeather : AppCompatActivity() {
             futureWeatherViewModel.getFutureData7Day(nameCity)
         }
 
-        adapter = FutureWeatherAdapter(onItemClick = { listWeatherThreeHour, position ->
-            changeView(listWeatherThreeHour,position,position+1)
-        })
+        adapter = FutureWeatherAdapter()
 
         binding.rcv7day.layoutManager = LinearLayoutManager(this@FutureWeather,RecyclerView.HORIZONTAL,false)
         binding.rcv7day.adapter = adapter

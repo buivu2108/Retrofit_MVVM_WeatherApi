@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.ArrayList
 
-class FutureWeatherAdapter( private var onItemClick: (listWeatherHour:ArrayList<ListWeatherThreeHour>,position: Int) -> Unit) : RecyclerView.Adapter<FutureWeatherAdapter.ViewHolder>() {
+class FutureWeatherAdapter() : RecyclerView.Adapter<FutureWeatherAdapter.ViewHolder>() {
     private val mListWeatherThreeHour= ArrayList<ListWeatherThreeHour>()
     private var selectedWeather: Int = 0
     private lateinit var context: Context
@@ -45,10 +45,6 @@ class FutureWeatherAdapter( private var onItemClick: (listWeatherHour:ArrayList<
                 .into(imgStatus)
             tvTemp.text = "${weatherThreeHour[position].main!!.temp}°C"
             tvDayOfWeek.text = getRankToDateFormat(weatherThreeHour[position].dtTxt)
-            imgBg.setOnClickListener {
-                onItemClick.invoke(weatherThreeHour,position)
-                changeSelectedWeather(position)
-            }
             if (selectedWeather == position) {
                 imgBg.setColorFilter(
                     ContextCompat.getColor(context, R.color.selecter),
