@@ -19,7 +19,8 @@
     <string name="humidity">Humidity</string>
     <string name="next_5_days">Next 5 days</string>
     <string name="feels_like">Feels like 24.54 °C</string>
-    <string name="_29sep_tuesday">29Sep, Tuesday</string>
+    <string name="_29sep_tuesday">29,Tuesday</string>
     <string name="_17_c_22_c">17°C / 22°C</string>
     <string name="sun">Sun</string>
+    <string name="weather_of_you">Weather Of You</string>
 </resources>

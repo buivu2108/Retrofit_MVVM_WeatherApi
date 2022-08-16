@@ -7,6 +7,8 @@ import android.widget.TextView.OnEditorActionListener
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.weatherapp.PurchaseFragment
+import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityCurrentWeatherBinding
 import com.example.weatherapp.screens.Constants
 import com.example.weatherapp.screens.future.FutureWeather
@@ -18,19 +20,31 @@ import java.util.*
 class CurrentWeather : AppCompatActivity() {
 
     private lateinit var binding: ActivityCurrentWeatherBinding
-
     private val currentViewModel: CurrentViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCurrentWeatherBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        initView()
         initViewModels()
         initEvent()
 
 
     }
+
+    private fun initView() {
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+    }
+
     private fun initEvent() {
+        binding.appBarr.btnPurchase.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container_view, PurchaseFragment())
+                .addToBackStack("purchase_fragment")
+                .commit()
+        }
         binding.btnNext5Day.setOnClickListener {
             val city = binding.edtSearch.text.toString().trim()
             if (city.isNotEmpty()){
@@ -70,7 +84,7 @@ class CurrentWeather : AppCompatActivity() {
 
             Picasso.get()
                 .load(imageUrl)
-                .into(binding.imgStatus)
+                .into(binding.imgStatusTop)
 
             if (it != null) {
                 binding.tvNameCity.text = it.name

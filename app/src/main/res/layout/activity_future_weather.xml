@@ -7,16 +7,20 @@
     android:background="@drawable/bg_top"
     tools:context=".screens.future.FutureWeather">
 
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imgBtnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_60dp"
+        android:layout_height="@dimen/_40dp"
         android:layout_margin="6dp"
-        android:minHeight="48dp"
+        android:padding="@dimen/_5dp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:tint="#FFFFFF"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <TextView
@@ -61,18 +65,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
         tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/bgBottom"
         android:layout_width="0dp"
-        android:layout_height="@dimen/_80dp"
+        android:layout_height="@dimen/_85dp"
         android:layout_margin="40dp"
         android:background="@drawable/bg_day_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bgCenter"
         app:layout_constraintVertical_bias="1"
         tools:ignore="ContentDescription" />
 
@@ -139,7 +144,7 @@
     <ImageView
         android:layout_width="@dimen/_100dp"
         android:layout_height="@dimen/_100dp"
-        android:src="@drawable/ic_water"
+        android:src="@drawable/ic_feel_like"
         app:layout_constraintEnd_toEndOf="@id/bgCenter"
         app:layout_constraintStart_toStartOf="@id/tvTemp"
         app:layout_constraintTop_toBottomOf="@id/tvFeelLike"
@@ -149,36 +154,38 @@
         android:id="@+id/imgWind"
         android:layout_width="@dimen/_70dp"
         android:layout_height="@dimen/_70dp"
+        android:layout_marginBottom="@dimen/_5dp"
         android:background="@drawable/bg_day_item_3st"
         android:padding="@dimen/_15dp"
-        android:src="@drawable/wind"
+        android:src="@drawable/ic_wind"
         app:layout_constraintBottom_toTopOf="@+id/tvWind"
-        android:layout_marginBottom="@dimen/_5dp"
         app:layout_constraintLeft_toLeftOf="@id/bgCenter"
         app:layout_constraintRight_toLeftOf="@id/imgPressure"
         tools:ignore="ContentDescription" />
+
     <ImageView
         android:id="@+id/imgPressure"
         android:layout_width="@dimen/_70dp"
         android:layout_height="@dimen/_70dp"
-        android:padding="@dimen/_15dp"
-        android:background="@drawable/bg_day_item_3st"
-        android:src="@drawable/ic_pressure"
         android:layout_marginBottom="@dimen/_5dp"
+        android:background="@drawable/bg_day_item_3st"
+        android:padding="@dimen/_15dp"
+        android:src="@drawable/ic_pressure"
         app:layout_constraintBottom_toTopOf="@id/tvPressure"
         app:layout_constraintLeft_toRightOf="@id/imgWind"
         app:layout_constraintRight_toLeftOf="@id/imgHumidity"
         tools:ignore="ContentDescription" />
+
     <ImageView
         android:id="@+id/imgHumidity"
         android:layout_width="@dimen/_70dp"
         android:layout_height="@dimen/_70dp"
-        android:background="@drawable/bg_day_item_3st"
-        android:src="@drawable/humidity"
-        android:padding="@dimen/_15dp"
         android:layout_marginBottom="@dimen/_5dp"
-        app:layout_constraintLeft_toRightOf="@id/imgPressure"
+        android:background="@drawable/bg_day_item_3st"
+        android:padding="@dimen/_15dp"
+        android:src="@drawable/humidity"
         app:layout_constraintBottom_toTopOf="@id/tvPressure"
+        app:layout_constraintLeft_toRightOf="@id/imgPressure"
         app:layout_constraintRight_toRightOf="@id/bgCenter"
         tools:ignore="ContentDescription" />
 
@@ -186,48 +193,48 @@
         android:id="@+id/tvWind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10dp"
         android:text="@string/_16_km_h"
         android:textColor="@color/white"
-        app:layout_constraintLeft_toLeftOf="@id/imgWind"
-        app:layout_constraintRight_toRightOf="@id/imgWind"
-        android:layout_marginBottom="@dimen/_10dp"
+        android:textSize="@dimen/_16sp"
         app:layout_constraintBottom_toBottomOf="@id/bgCenter"
-        android:textSize="@dimen/_16sp" />
+        app:layout_constraintLeft_toLeftOf="@id/imgWind"
+        app:layout_constraintRight_toRightOf="@id/imgWind" />
 
     <TextView
         android:id="@+id/tvPressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_1004_1_mb"
-        app:layout_constraintLeft_toLeftOf="@id/imgPressure"
-        app:layout_constraintRight_toRightOf="@id/imgPressure"
-        app:layout_constraintBottom_toBottomOf="@id/bgCenter"
         android:layout_marginBottom="@dimen/_10dp"
+        android:text="@string/_1004_1_mb"
         android:textColor="@color/white"
-        android:textSize="@dimen/_16sp" />
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toBottomOf="@id/bgCenter"
+        app:layout_constraintLeft_toLeftOf="@id/imgPressure"
+        app:layout_constraintRight_toRightOf="@id/imgPressure" />
 
     <TextView
         android:id="@+id/tvHumidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/_76"
         android:layout_marginBottom="@dimen/_10dp"
-        app:layout_constraintLeft_toLeftOf="@id/imgHumidity"
-        app:layout_constraintRight_toRightOf="@id/imgHumidity"
-        app:layout_constraintBottom_toBottomOf="@id/bgCenter"
+        android:text="@string/_76"
         android:textColor="@color/white"
-        android:textSize="@dimen/_16sp" />
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toBottomOf="@id/bgCenter"
+        app:layout_constraintLeft_toLeftOf="@id/imgHumidity"
+        app:layout_constraintRight_toRightOf="@id/imgHumidity" />
 
     <ImageView
         android:id="@+id/imgStatusFuture"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_weather"
         android:layout_marginStart="-10dp"
         android:layout_marginBottom="@dimen/_20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_weather"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -247,33 +254,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_29sep_tuesday"
-        app:layout_constraintTop_toBottomOf="@id/tvStatusNextDay"
-        app:layout_constraintStart_toStartOf="@id/tvStatusNextDay"
-        app:layout_constraintEnd_toEndOf="@id/tvStatusNextDay"
         android:textColor="@color/white"
-       />
+        app:layout_constraintEnd_toEndOf="@id/tvStatusNextDay"
+        app:layout_constraintStart_toStartOf="@id/tvStatusNextDay"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusNextDay" />
+
     <TextView
         android:id="@+id/tvMaxMinTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5dp"
         android:text="@string/_17_c_22_c"
-        app:layout_constraintTop_toBottomOf="@id/tvDayInWeek"
-        app:layout_constraintStart_toStartOf="@id/tvStatusNextDay"
-        app:layout_constraintEnd_toEndOf="@id/tvStatusNextDay"
         android:textColor="@color/white"
-         />
+        app:layout_constraintBottom_toBottomOf="@id/bgBottom"
+        app:layout_constraintEnd_toEndOf="@id/tvStatusNextDay"
+        app:layout_constraintStart_toStartOf="@id/tvStatusNextDay"
+        app:layout_constraintTop_toBottomOf="@id/tvDayInWeek" />
 
     <ImageView
         android:id="@+id/imgNextDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/ic_righ"
-        app:layout_constraintTop_toTopOf="@id/bgBottom"
         android:layout_marginEnd="@dimen/_10dp"
+        android:src="@drawable/ic_righ"
         app:layout_constraintBottom_toBottomOf="@id/bgBottom"
         app:layout_constraintEnd_toEndOf="@id/bgBottom"
-        tools:ignore="ContentDescription"
-        app:tint="#FFFFFF" />
+        app:layout_constraintTop_toTopOf="@id/bgBottom"
+        app:tint="#FFFFFF"
+        tools:ignore="ContentDescription" />
 
+    <RelativeLayout
+        android:id="@+id/fragment_container_view_future"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
